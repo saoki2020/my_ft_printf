@@ -6,7 +6,7 @@
 /*   By: saoki <saoki@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/14 18:54:35 by saoki             #+#    #+#             */
-/*   Updated: 2021/01/17 09:35:55 by saoki            ###   ########.fr       */
+/*   Updated: 2021/01/17 09:54:39 by saoki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,4 +99,3 @@ void					get_putlen_ux(t_data_flag *data, unsigned long long num)
 	else
 		data->field -= data->printed_len;
 }
-
