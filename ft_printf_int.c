@@ -6,7 +6,7 @@
 /*   By: saoki <saoki@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/14 18:54:35 by saoki             #+#    #+#             */
-/*   Updated: 2021/01/14 20:39:27 by saoki            ###   ########.fr       */
+/*   Updated: 2021/01/17 09:35:55 by saoki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,31 +100,3 @@ void					get_putlen_ux(t_data_flag *data, unsigned long long num)
 		data->field -= data->printed_len;
 }
 
-void					print_pointer(va_list *ap, t_data_flag *data)
-{
-	unsigned long		num;
-
-	data->specifier = SPEC_SX;
-	data->flag[FLAG_SHARP] = 1;
-	if ((num = (unsigned long)va_arg(*ap, void *)) == 0)
-	{
-		if (data->precision == -1)
-			data->precision = 1;
-		data->printed_len = 2 + data->precision;
-		data->field = ((data->field <= data->precision) ? 0 :
-				data->field - (2 + data->precision));
-	}
-	else
-		get_putlen_ux(data, num);
-	if (!data->flag[FLAG_MINUS] && !data->flag[FLAG_ZERO])
-		printf_putchar(' ', data->field);
-	write(1, "0x", 2);
-	if (!data->flag[FLAG_MINUS] && data->flag[FLAG_ZERO])
-		printf_putchar('0', data->precision + data->field);
-	else
-		printf_putchar('0', data->precision);
-	if (num)
-		putnbr_diux(num, *data);
-	if (data->flag[FLAG_MINUS])
-		printf_putchar(' ', data->field);
-}

@@ -6,7 +6,7 @@
 /*   By: saoki <saoki@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 07:52:39 by saoki             #+#    #+#             */
-/*   Updated: 2021/01/14 20:23:00 by saoki            ###   ########.fr       */
+/*   Updated: 2021/01/17 09:34:25 by saoki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,6 @@ void			print_string(va_list *ap, t_data_flag *data);
 int				set_print_string(va_list *ap, t_data_flag *data, char **s);
 int				ft_strlen(const char *str);
 int				print_null(t_data_flag *data, char **s);
-void			pointer_null_nofit(t_data_flag *data);
+void			pointer_null(t_data_flag *data);
 
 #endif
