@@ -6,7 +6,7 @@
 #    By: saoki <saoki@student.42tokyo.jp>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/15 13:51:39 by saoki             #+#    #+#              #
-#    Updated: 2021/01/17 10:06:09 by saoki            ###   ########.fr        #
+#    Updated: 2021/01/17 20:28:07 by saoki            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ $(NAME): $(OBJS)
 	ar rc $(NAME) $(OBJS)
 
 bonus: $(OBJS)
-	ar rc $(NAME) $(OBJS) $(OBJS_B)
+	ar rc $(NAME) $(OBJS)
 
 clean:
 	rm -f $(OBJS)
